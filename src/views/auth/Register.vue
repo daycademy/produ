@@ -11,21 +11,27 @@
             title="E-Mail"
             v-model="emailInput"
           >
-            <span class="icon">A</span>
+            <span class="icon">
+              <i class="fas fa-user" />
+            </span>
           </v-input-field>
           <v-input-field
             icon
             title="Passwort"
             v-model="passwordInput"
           >
-            <span class="icon">B</span>
+            <span class="icon">
+              <span class="fas fa-lock" />
+            </span>
           </v-input-field>
           <v-input-field
             icon
             title="Passwort wiederholen"
             v-model="passwordInputRepeat"
           >
-            <span class="icon">C</span>
+            <span class="icon">
+              <i class="fas fa-lock" />
+            </span>
           </v-input-field>
           <v-btn
             color="primary"
@@ -38,7 +44,7 @@
           >
             Registrieren
           </v-btn>
-          <p>Du kannst dich <b class="text-link">hier</b> einloggen</p>
+          <p>Du kannst dich <a href="/login">hier</a> einloggen</p>
         </v-container>
       </v-card>
     </v-container>
@@ -77,6 +83,10 @@ export default class Register extends Vue {
 
     button {
       margin-top: 1em;
+    }
+
+    a {
+      padding: 0;
     }
 
     p {

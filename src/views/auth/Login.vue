@@ -11,14 +11,18 @@
             title="E-Mail"
             v-model="emailInput"
           >
-            <span class="icon">A</span>
+            <span class="icon">
+              <i class="fas fa-user" />
+            </span>
           </v-input-field>
           <v-input-field
             icon
             title="Passwort"
             v-model="passwordInput"
           >
-            <span class="icon">B</span>
+            <span class="icon">
+              <i class="fas fa-lock" />
+            </span>
           </v-input-field>
           <v-btn
             color="primary"
@@ -27,7 +31,7 @@
           >
             Login
           </v-btn>
-          <p>Du kannst dich <b class="text-link">hier</b> registrieren</p>
+          <p>Du kannst dich <a href="/register">hier</a> registrieren</p>
         </v-container>
       </v-card>
     </v-container>
@@ -72,6 +76,10 @@ export default class Login extends Vue {
       b {
         cursor: pointer;
       }
+    }
+
+    a {
+      padding: 0;
     }
   }
 
