@@ -1,25 +1,13 @@
 <template>
-  <div class="home">
-    <img
-      alt="Vue logo"
-      src="../assets/logo.png"
-    >
-    <v-btn color="success">
-      Hello World
-    </v-btn>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <section id="home">
+    <h1>test</h1>
+  </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue';
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
+@Component
 export default class Home extends Vue {}
 </script>
