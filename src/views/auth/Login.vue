@@ -65,6 +65,7 @@ export default class Login extends Vue {
     max-width: 500px;
     padding-top: 2em;
     padding-bottom: 2em;
+    margin: 0 auto;
 
     button {
       margin-top: 1em;
@@ -85,7 +86,6 @@ export default class Login extends Vue {
 
   .fully-centered-content {
     align-self: center;
-    margin: 0 auto;
 
     .input-control {
       text-align: left;
