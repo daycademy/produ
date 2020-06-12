@@ -5,34 +5,19 @@
         <h2 class="font-normal">
           Product Requests
         </h2>
-        <img
-          src="@/assets/auth_img.png"
-          alt="auth-img"
-        >
+        <img src="@/assets/auth_img.png" alt="auth-img" />
         <v-container>
-          <v-input-field
-            icon
-            title="E-Mail"
-            v-model="emailInput"
-          >
+          <v-input-field icon title="E-Mail" v-model="emailInput">
             <span class="icon">
               <i class="fas fa-user" />
             </span>
           </v-input-field>
-          <v-input-field
-            icon
-            title="Passwort"
-            v-model="passwordInput"
-          >
+          <v-input-field icon title="Passwort" v-model="passwordInput">
             <span class="icon">
               <span class="fas fa-lock" />
             </span>
           </v-input-field>
-          <v-input-field
-            icon
-            title="Passwort wiederholen"
-            v-model="passwordInputRepeat"
-          >
+          <v-input-field icon title="Passwort wiederholen" v-model="passwordInputRepeat">
             <span class="icon">
               <i class="fas fa-lock" />
             </span>
