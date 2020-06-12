@@ -5,6 +5,10 @@
         <h2 class="font-normal">
           Product Requests
         </h2>
+        <img
+          src="@/assets/auth_img.png"
+          alt="auth-img"
+        >
         <v-container>
           <v-input-field
             icon
@@ -101,6 +105,10 @@ export default class Register extends Vue {
 
   .fully-centered-content {
     align-self: center;
+
+    img {
+      width: 100%;
+    }
 
     .input-control {
       text-align: left;
