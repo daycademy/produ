@@ -12,25 +12,22 @@
               <i class="fas fa-user" />
             </span>
           </v-input-field>
-          <v-input-field icon title="Passwort" v-model="passwordInput">
-            <span class="icon">
-              <span class="fas fa-lock" />
-            </span>
-          </v-input-field>
-          <v-input-field icon title="Passwort wiederholen" v-model="passwordInputRepeat">
+          <v-input-field type="password" icon title="Passwort" v-model="passwordInput">
             <span class="icon">
               <i class="fas fa-lock" />
             </span>
           </v-input-field>
-          <v-btn
-            color="primary"
-            @click.prevent="login"
-            :disabled="
-              passwordInput.length === 0 ||
-                passwordInputRepeat.length === 0 ||
-                emailInput.length === 0
-            "
+          <v-input-field
+            type="password"
+            icon
+            title="Passwort wiederholen"
+            v-model="passwordInputRepeat"
           >
+            <span class="icon">
+              <i class="fas fa-lock" />
+            </span>
+          </v-input-field>
+          <v-btn color="primary" @click.prevent="login" :disabled="isValidLogin()">
             Registrieren
           </v-btn>
           <p>Du kannst dich <a href="/login">hier</a> einloggen</p>
@@ -51,6 +48,17 @@ export default class Register extends Vue {
   private passwordInput = '';
 
   private passwordInputRepeat = '';
+
+  private isValidLogin(): boolean {
+    /* eslint-disable */
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return (
+      this.passwordInput.length === 0 ||
+      this.passwordInputRepeat.length === 0 ||
+      this.emailInput.length === 0 ||
+      !this.emailInput.match(regex)
+    );
+  }
 
   private login(): void {
     console.log(this.emailInput);

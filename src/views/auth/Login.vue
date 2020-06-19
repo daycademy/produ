@@ -12,16 +12,12 @@
               <i class="fas fa-user" />
             </span>
           </v-input-field>
-          <v-input-field icon title="Passwort" v-model="passwordInput">
+          <v-input-field icon type="password" title="Passwort" v-model="passwordInput">
             <span class="icon">
               <i class="fas fa-lock" />
             </span>
           </v-input-field>
-          <v-btn
-            color="primary"
-            @click.prevent="login"
-            :disabled="passwordInput.length === 0 || emailInput.length === 0"
-          >
+          <v-btn color="primary" @click.prevent="login" :disabled="isValidLogin()">
             Login
           </v-btn>
           <p>Du kannst dich <a href="/register">hier</a> registrieren</p>
@@ -40,6 +36,16 @@ export default class Login extends Vue {
   private emailInput = '';
 
   private passwordInput = '';
+
+  private isValidLogin(): boolean {
+    /* eslint-disable */
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return (
+      this.passwordInput.length === 0 ||
+      this.emailInput.length === 0 ||
+      !this.emailInput.match(regex)
+    );
+  }
 
   private login(): void {
     console.log(this.emailInput);
