@@ -1,13 +1,21 @@
 <template>
   <section id="home">
-    <h1>test</h1>
+    <Header
+      title="Product Requests"
+      subtitle="Gestalte diese App mit und diskutiere über Features"
+    />
   </section>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
+import Header from '@/components/Header.vue';
 
-@Component
+@Component({
+  components: {
+    Header,
+  },
+})
 export default class Home extends Vue {}
 </script>
