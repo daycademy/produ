@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <div class="auth-view">
     <v-container class="fully-centered-content">
       <v-card>
         <h2 class="font-normal">
@@ -59,45 +59,5 @@ export default class Register extends Vue {
 </script>
 
 <style lang="scss">
-.register {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  background-color: #fafafb;
-
-  .card {
-    max-width: 500px;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin: 0 auto;
-
-    button {
-      margin-top: 1em;
-    }
-
-    a {
-      padding: 0;
-    }
-
-    p {
-      margin: 0;
-
-      b {
-        cursor: pointer;
-      }
-    }
-  }
-
-  .fully-centered-content {
-    align-self: center;
-
-    img {
-      width: 100%;
-    }
-
-    .input-control {
-      text-align: left;
-    }
-  }
-}
+@import './auth.scss';
 </style>
