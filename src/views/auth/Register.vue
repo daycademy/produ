@@ -5,29 +5,45 @@
         <h2 class="font-normal">
           Product Requests
         </h2>
-        <img src="@/assets/auth_img.png" alt="auth-img" />
+        <img
+          src="@/assets/auth_img.png"
+          alt="auth-img"
+        >
         <v-container>
-          <v-input-field icon title="E-Mail" v-model="emailInput">
+          <v-input-field
+            v-model="emailInput"
+            icon
+            title="E-Mail"
+          >
             <span class="icon">
               <i class="fas fa-user" />
             </span>
           </v-input-field>
-          <v-input-field type="password" icon title="Passwort" v-model="passwordInput">
-            <span class="icon">
-              <i class="fas fa-lock" />
-            </span>
-          </v-input-field>
           <v-input-field
+            v-model="passwordInput"
             type="password"
             icon
-            title="Passwort wiederholen"
-            v-model="passwordInputRepeat"
+            title="Passwort"
           >
             <span class="icon">
               <i class="fas fa-lock" />
             </span>
           </v-input-field>
-          <v-btn color="primary" @click.prevent="login" :disabled="isValidLogin()">
+          <v-input-field
+            v-model="passwordInputRepeat"
+            type="password"
+            icon
+            title="Passwort wiederholen"
+          >
+            <span class="icon">
+              <i class="fas fa-lock" />
+            </span>
+          </v-input-field>
+          <v-btn
+            color="primary"
+            :disabled="isValidLogin()"
+            @click.prevent="login"
+          >
             Registrieren
           </v-btn>
           <p>Du kannst dich <a href="/login">hier</a> einloggen</p>

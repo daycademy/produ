@@ -4,10 +4,10 @@ module.exports = {
     node: true,
   },
   extends: [
-    'plugin:vue/essential',
-    'plugin:prettier/recommended',
-    '@vue/airbnb',
+    'plugin:vue/recommended',
+    'prettier/vue',
     '@vue/typescript/recommended',
+    '@vue/airbnb',
     'plugin:vue/strongly-recommended',
   ],
   parserOptions: {

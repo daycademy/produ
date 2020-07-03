@@ -2,24 +2,37 @@
   <div class="title-header">
     <v-container>
       <div :class="`title ${enableBackButton ? 'u-text-center' : 'text-left'}`">
-        <router-link v-if="enableBackButton" to="/">
+        <router-link
+          v-if="enableBackButton"
+          to="/"
+        >
           <p class="back-btn">
-            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-left" />
             Zurück
           </p>
         </router-link>
         <h2>{{ title }}</h2>
         <v-dropdown right>
           <template #button>
-            <v-btn color="transparent" dropdown circle>
-              <v-avatar text="A"></v-avatar>
+            <v-btn
+              color="transparent"
+              dropdown
+              circle
+            >
+              <v-avatar text="A" />
             </v-btn>
           </template>
-          <v-dropdown-item href="/register">Registrieren</v-dropdown-item>
-          <v-dropdown-item href="/login">Einloggen</v-dropdown-item>
+          <v-dropdown-item href="/register">
+            Registrieren
+          </v-dropdown-item>
+          <v-dropdown-item href="/login">
+            Einloggen
+          </v-dropdown-item>
         </v-dropdown>
       </div>
-      <h5 v-if="subtitle">{{ subtitle }}</h5>
+      <h5 v-if="subtitle">
+        {{ subtitle }}
+      </h5>
     </v-container>
   </div>
 </template>
